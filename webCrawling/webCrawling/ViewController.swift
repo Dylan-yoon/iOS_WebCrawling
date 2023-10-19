@@ -9,8 +9,30 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var mainTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        view.backgroundColor = .systemBrown
+        mainTableView.backgroundColor = .clear
+        
+        let nibName = UINib(nibName: "TableViewCell", bundle: nil)
+        mainTableView.register(nibName, forCellReuseIdentifier: "CustomCell")
+        
+        mainTableView.delegate = self
+        mainTableView.dataSource = self
+    }
+}
+
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as? TableViewCell else { return UITableViewCell() }
+        
+        return cell
     }
 }
