@@ -25,6 +25,16 @@ class ViewController: UIViewController {
         
         mainTableView.delegate = self
         mainTableView.dataSource = self
+        
+        NetWork.getHTML { result in
+            switch result {
+            case .success(let datas):
+                self.yagomDatas = datas
+                self.mainTableView.reloadData()
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
 
