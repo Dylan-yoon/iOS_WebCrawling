@@ -15,6 +15,7 @@
 		17756D6A2AE0B70600D3D81A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17756D682AE0B70600D3D81A /* LaunchScreen.storyboard */; };
 		17756D732AE0BA0500D3D81A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17756D712AE0BA0500D3D81A /* TableViewCell.swift */; };
 		17756D742AE0BA0500D3D81A /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17756D722AE0BA0500D3D81A /* TableViewCell.xib */; };
+		F6FAFF672AE64AC100A9992B /* YagomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FAFF662AE64AC100A9992B /* YagomData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		17756D6B2AE0B70600D3D81A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17756D712AE0BA0500D3D81A /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		17756D722AE0BA0500D3D81A /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		F6FAFF662AE64AC100A9992B /* YagomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YagomData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				17756D5D2AE0B70400D3D81A /* AppDelegate.swift */,
 				17756D5F2AE0B70400D3D81A /* SceneDelegate.swift */,
 				17756D612AE0B70400D3D81A /* ViewController.swift */,
+				F6FAFF662AE64AC100A9992B /* YagomData.swift */,
 				17756D632AE0B70400D3D81A /* Main.storyboard */,
 				17756D712AE0BA0500D3D81A /* TableViewCell.swift */,
 				17756D722AE0BA0500D3D81A /* TableViewCell.xib */,
@@ -149,6 +152,7 @@
 				17756D732AE0BA0500D3D81A /* TableViewCell.swift in Sources */,
 				17756D5E2AE0B70400D3D81A /* AppDelegate.swift in Sources */,
 				17756D602AE0B70400D3D81A /* SceneDelegate.swift in Sources */,
+				F6FAFF672AE64AC100A9992B /* YagomData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +312,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -336,6 +341,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
