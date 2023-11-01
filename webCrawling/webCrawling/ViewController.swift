@@ -32,10 +32,27 @@ class ViewController: UIViewController {
                 self.yagomDatas = datas
                 DispatchQueue.main.async {
                     self.mainTableView.reloadData()
+                    self.imageSetting()
                 }
-                
             case .failure(let error):
                 print(error)
+            }
+        }
+    }
+    
+    func imageSetting() {
+        for (index, value) in yagomDatas.enumerated() {
+            NetWork.getImage(value.imageLink!) { result in
+                switch result {
+                case .success(let image):
+                    self.yagomDatas[index].image = image
+                    DispatchQueue.main.async {
+                        self.mainTableView.reloadData()
+                    }
+                    
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
             }
         }
     }
@@ -53,8 +70,12 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         
         cell.nameLabel.text = data.name
         cell.positionLabel.text = data.position
-//        cell.photoImageView.image = data.image
+        cell.photoImageView.image = data.image
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

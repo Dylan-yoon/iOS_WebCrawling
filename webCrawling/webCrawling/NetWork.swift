@@ -93,7 +93,7 @@ class NetWork {
             for (index, i) in imageElements.enumerated() {
                 print(index, terminator: " ")
                 print(try i.attr("src".description))
-                yagomDatas[index].image = try i.attr("src".description)
+                yagomDatas[index].imageLink = try i.attr("src".description)
             }
         } catch {
             print(error.localizedDescription)
@@ -104,7 +104,7 @@ class NetWork {
     
     static func getImage(_ url: String, completion: @escaping (Result<UIImage, NetWorkError>) -> Void) {
         
-        let url = URL(string: "https://www.yagom-academy.kr/about")
+        let url = URL(string: url)
         
         let session = URLSession.shared
         let dataTask = session.dataTask(with: url!) { data, response, error in
