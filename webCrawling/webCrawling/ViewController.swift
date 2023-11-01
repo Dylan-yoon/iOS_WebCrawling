@@ -9,8 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    // 기본 셀
-    var yagomDatas = [YagomData(name: "Yagom", position: "대장", image: UIImage(named: "yagomlogo")!)]
+    var yagomDatas = [YagomData(name: "Yagom", position: "대장")]
     
     @IBOutlet weak var mainTableView: UITableView!
     
@@ -26,11 +25,15 @@ class ViewController: UIViewController {
         mainTableView.delegate = self
         mainTableView.dataSource = self
         
-        NetWork.getHTML { result in
+        let network = NetWork()
+        network.getHTML { result in
             switch result {
             case .success(let datas):
                 self.yagomDatas = datas
-                self.mainTableView.reloadData()
+                DispatchQueue.main.async {
+                    self.mainTableView.reloadData()
+                }
+                
             case .failure(let error):
                 print(error)
             }
@@ -50,7 +53,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         
         cell.nameLabel.text = data.name
         cell.positionLabel.text = data.position
-        cell.photoImageView.image = data.image
+//        cell.photoImageView.image = data.image
         
         return cell
     }

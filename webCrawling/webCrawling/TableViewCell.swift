@@ -18,14 +18,10 @@ class TableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-//        self.reuseIdentifier = "customCell"
-        // Initialization code
+        photoImageView.image = UIImage(named: "yagomlogo")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-    
 }

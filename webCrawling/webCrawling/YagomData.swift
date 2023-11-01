@@ -10,5 +10,5 @@ import UIKit
 struct YagomData {
     var name: String
     var position: String
-    var image: UIImage
+    var image: String?
 }
