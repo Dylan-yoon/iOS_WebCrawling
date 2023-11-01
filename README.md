@@ -1,2 +1,2 @@
 # iOS_WebCrawling
-yagom-academy_야아콘 자료
+yagom-academy_에듀콘 자료
