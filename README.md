@@ -19,13 +19,11 @@
 Web에서 가져온 HTML 을 사용하기 위해서 Element가 어떤 것인지, <br>
 Attribute가 어떤 것인지 정도만 알면 된다.<br>
 
-
-[사진]<br>
+<img width="859" alt="HTMLElement" src="https://github.com/Dylan-yoon/iOS_WebCrawling/assets/77507952/e99425ee-6a75-4481-8ecf-f6cc07f23d69"><br>
 Element : `여는 Tag` + `Content` + `닫는 Tag` <br>
 Tag로 둘러쌓인 내부 : `Content`
 
-
-[사진]<br>
+<img width="861" alt="AttributeExample" src="https://github.com/Dylan-yoon/iOS_WebCrawling/assets/77507952/958b7357-005f-4910-a573-aafd3c4055ee"><br>
 - Tag : `p` 
 - Attribute : `class="editor-mode"` 
 
